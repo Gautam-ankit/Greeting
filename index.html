@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>Sound Box</title>
+	<script type="text/javascript" src="aframe.min.js"></script>
+	<script type="text/javascript" src="aframe-text-geometry-component.min.js"></script>
+	<script type="text/javascript" src="aframe-particle-system-component.min.js"></script>
+	<script type="text/javascript" src="aframe-animation-component.min.js"></script>
+</head>
+<body>
+	
+	<a-scene>
+
+		<a-assets>
+			<img id="djtexture" src="djtexture.jpg">
+			<img id="soundbox" src="sbox.jpg">
+			<img id="sky" src="sky.jpg">
+			<img id="inct" src="inct.jpg">
+			<sound id="djsound" src="country.mp3" autoplay="on" loop="true">
+			<video id="floorlight" src="floorl.mp4" autoplay="true" loop="true">
+			<video id="nflag" src="national_flag.mp4" autoplay="true" loop="true">
+		</a-assets>
+
+	<!--	Sky	-->
+
+		<a-sky src="#sky"></a-sky>
+		<a-box position="5 40 -40" src="#nflag" width="150" height="100"></a-box>
+	<!-- 	floor light and animation	-->	
+
+		<a-box position="0 -4 -3" width="30" height="30" src="#floorlight" rotation="-90 0 0"></a-box>
+ 
+     		 <a-entity particle-system="preset: snow; particleCount: 10000"></a-entity>
+      	<a-entity id="mine">
+      		<a-entity particle-system="preset: default; color:#008000; particleCount: 2000" position="62 0 -25"></a-entity>
+      		<a-entity particle-system="preset: default; color: white; particleCount: 2000" position="60 0 -25" ></a-entity>
+      		<a-entity particle-system="preset: default; color: #FF8C00; particleCount: 2000" position="58 0 -25"></a-entity>
+      	</a-entity>
+
+      		<a-entity particle-system="preset: default; color:#008000; particleCount: 2000" position="-55 0 -25"></a-entity>
+      		<a-entity particle-system="preset: default; color: white; particleCount: 2000" position="-53 0 -25" ></a-entity>
+      		<a-entity particle-system="preset: default; color: #FF8C00; particleCount: 2000" position="-51 0 -25"></a-entity>
+
+
+     <!--	sound box 1  -->
+
+
+     
+		<a-box position="0 -1 -8" rotation="0 0 0" width="5.5" height="4" src="#djtexture" sound="src:#djsound; autoplay:on; loop:true volume:200"></a-box>
+		
+		<a-circle position="0 -1 -7.5" rotation="0 0 0" radius="1.5" src="#soundbox" color="grey" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+		
+		<a-circle position="2 0.3 -7.5" rotation="0 0 0" radius="0.35" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+		<a-circle position="2 -2.2 -7.5" rotation="0 0 0" radius="0.35" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+		<a-circle position="-2 0.3 -7.5" rotation="0 0 0" radius="0.35" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+		<a-circle position="-2 -2.2 -7.5" rotation="0 0 0" radius="0.35" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+
+	<!--	sound box 2  -->
+
+		<a-box position="4.5 0 -8" rotation="0 0 0" width="2.5" height="6" src="#djtexture"></a-box>
+
+		<a-circle position="4.5 1.4 -7.5" rotation="0 0 0" radius="0.9" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+		<a-circle position="4.5 -0.4 -7.5" rotation="0 0 0" radius="0.6" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+		<a-circle position="4.5 -1.7 -7.5" rotation="0 0 0" radius="0.4" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+
+	<!--	sound box 3  -->
+
+		<a-box position="-4.5 0 -8" rotation="0 0 0" width="2.5" height="6" src="#djtexture"></a-box>
+			
+		<a-circle position="-4.5 1.4 -7.5" rotation="0 0 0" radius="0.9" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+		<a-circle position="-4.5 -0.4 -7.5" rotation="0 0 0" radius="0.6" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+		<a-circle position="-4.5 -1.7 -7.5" rotation="0 0 0" radius="0.4" color="grey" src="#soundbox" animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"></a-circle>
+
+		
+	</a-scene>
+</body>
+</html>
